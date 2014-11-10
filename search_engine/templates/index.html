@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Pythonで作る検索エンジン</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pythonで作る検索エンジン</h1>
+
+        <form method="post" action="{{url_for('index')}}">
+            <div class="row">
+                <div class="col-xs-10">
+                    <input type="text" class="form-control" name="keyword" placeholder="キーワードを入力して下さい.">
+                </div>
+                <div class="col-xs-2">
+                    <input type="submit" class="btn btn-md btn-block btn-primary" value="検索">
+                </div>
+            </div>
+        </form>
+
+        {% if keyword %}
+            {{keyword}}
+        {% endif %}
+        <ul>
+            {% for url in urls %}
+            <li><a href="{{url}}">{{url}}</a></li>
+            {% else %}
+            <p>キーワードを入れて検索ボタンを押して下さい.</p>
+            {% endfor %}
+        </ul>
+
+    </div><!-- container -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
