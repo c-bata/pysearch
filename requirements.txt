@@ -1,0 +1,5 @@
+Scrapy==0.24.4
+Twisted==14.0.2
+queuelib==1.2.2
+w3lib==1.10.0
+wsgiref==0.1.2
