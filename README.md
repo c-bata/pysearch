@@ -16,7 +16,7 @@
 
 - Python 2.7
 - pip
-- Mecab
+- MeCab
 
 ## Setup
 
@@ -42,17 +42,19 @@
     
     [Homebrew + Virtualenv 環境でMeCabのインストール : さりんじゃーのプログラミング日記](http://salinger.github.io/blog/2013/01/17/1/)
 
-2. Install python packages
+1. Install python packages
 
     ```
     $ cd SearchEngine
     $ pip install -r requirements.txt
     ```
 
-3. Run
+1. Run
 
     ```
-    $ python run.py
+    $ python web_crawler.py # build a index
+    $ python run.py # access to http://127.0.0.1:5000
     ```
+    
 
 

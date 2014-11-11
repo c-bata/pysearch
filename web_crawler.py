@@ -7,8 +7,13 @@ import MeCab
 
 
 def split_to_word(text):
+    """
+    MeCabを使って日本語を形態素解析
+    単語に切り分け、リストをつくる
+    """
     words = []
     m = MeCab.Tagger("-Ochasen")
+    text = unicode(text, "utf-8")
     text = text.encode("utf-8")
     node = m.parseToNode(text)
     while node:
@@ -25,12 +30,28 @@ def get_page(url):
 
 
 def union(a, b):
+    """
+    リストを結合．重複していれば追加しない
+
+    >>> a, b = ['a', 'b', 'c'], ['b', 'c', 'd']
+    >>> union(a,b)
+    >>> print a
+    ['a', 'b', 'c', 'd']
+    """
     for e in b:
         if e not in a:
             a.append(e)
 
 
 def get_next_target(page):
+    """
+    文字列に変換したWeb文書からURLリンクを抽出
+
+    >>> ('link1', 16) == get_next_target('aa<a href="link1">link</a>bbcc')
+    True
+    >>> (None, 0) == get_next_target('aabbcc')
+    True
+    """
     start_link = page.find('<a href=')
     if start_link == -1:
         return None, 0
@@ -41,6 +62,12 @@ def get_next_target(page):
 
 
 def get_all_links(page):
+    """
+    文字列に変換したWeb文書内のURLリンクを全て抽出してリストに格納．
+
+    >>> ['link1', 'link2'] == get_all_links('aa<a href="link1">link1</a>bb<a href="link2">link2</a>cc')
+    True
+    """
     links = []
     while True:
         url, end_pos = get_next_target(page)
@@ -77,9 +104,15 @@ def crawl_web(seed, max_depth):
         page = to_crawl.pop()
         if page not in crawled:
             content = get_page(page)
-            add_page_to_index(, page, content)
+            add_page_to_index(page, content)
             union(to_crawl, get_all_links(content))
             crawled.append(page)
         if not to_crawl:
             to_crawl, next_depth = next_depth, []
             depth += 1
+
+
+if __name__ == '__main__':
+    # crawl_web('http://docs.sphinx-users.jp/contents.html', 2)
+    import doctest
+    doctest.testmod()
