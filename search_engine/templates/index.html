@@ -25,16 +25,17 @@
         <br>
 
         {% if keyword %}
-            <h3>{{keyword}}の検索結果...</h3>
-        {% endif %}
+        <h3>「{{keyword}}」の検索結果...</h3>
         <ul>
-            {% for url in urls %}
+            {% for url in query['url'] %}
             <li><a href="{{url}}">{{url}}</a></li>
             {% else %}
-            <p>キーワードを入れて検索ボタンを押して下さい.</p>
+            <p>そのキーワードを持つページはありませんでした．</p>
             {% endfor %}
         </ul>
-
+        {% else %}
+        <p>キーワードを入れて検索ボタンを押して下さい.</p>
+        {% endif %}
     </div><!-- container -->
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

@@ -1,2 +1,12 @@
-Flask
-pymongo
+Flask==0.10.1
+Jinja2==2.7.3
+MarkupSafe==0.23
+Scrapy==0.24.4
+Twisted==14.0.2
+Werkzeug==0.9.6
+itsdangerous==0.24
+mecab-python==0.996
+pymongo==2.7.2
+queuelib==1.2.2
+w3lib==1.10.0
+wsgiref==0.1.2

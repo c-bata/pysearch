@@ -2,6 +2,8 @@
 
 ## Description
 
+![スクリーンショット 2014-11-11 22.49.07.png](https://qiita-image-store.s3.amazonaws.com/0/29989/786c36ad-4de7-43a7-75a0-98c82e412fa3.png "スクリーンショット 2014-11-11 22.49.07.png")
+
 勉強用に作った検索エンジン。やったことは以下のとおり。
 
 - Webクローラの構築
@@ -52,9 +54,7 @@
 1. Run
 
     ```
-    $ python web_crawler.py # build a index
-    $ python run.py # access to http://127.0.0.1:5000
+    $ python run-crawler.py # build a index
+    $ python run-webapp.py # access to http://127.0.0.1:5000
     ```
     
-
-

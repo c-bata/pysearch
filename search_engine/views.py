@@ -12,6 +12,6 @@ def index():
         keyword = request.form['keyword']
         if keyword:
             return render_template('index.html',
-                                   urls=col.find_one({'keyword': keyword})['url'],
+                                   query=col.find_one({'keyword': keyword}),
                                    keyword=keyword)
     return render_template('index.html')
