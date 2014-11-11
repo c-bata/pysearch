@@ -11,7 +11,7 @@ def index():
     if request.method == 'POST':
         keyword = request.form['keyword']
         if keyword:
-            #query = ['http://google.com', 'http://amazon.co.jp']
-            query = col.find_one({'keyword': keyword})['url']
-            return render_template('index.html', urls=query, keyword=keyword)
+            return render_template('index.html',
+                                   urls=col.find_one({'keyword': keyword})['url'],
+                                   keyword=keyword)
     return render_template('index.html')

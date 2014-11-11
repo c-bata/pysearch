@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'masashi'
 
-from search_engine import collection as col
+from web_crawler import collection as col
 import urllib2
 import MeCab
 
@@ -113,6 +113,6 @@ def crawl_web(seed, max_depth):
 
 
 if __name__ == '__main__':
-    # crawl_web('http://docs.sphinx-users.jp/contents.html', 2)
+    #crawl_web('http://docs.sphinx-users.jp/contents.html', 2)
     import doctest
     doctest.testmod()

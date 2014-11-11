@@ -22,8 +22,10 @@
             </div>
         </form>
 
+        <br>
+
         {% if keyword %}
-            {{keyword}}
+            <h3>{{keyword}}の検索結果...</h3>
         {% endif %}
         <ul>
             {% for url in urls %}
