@@ -2,4 +2,4 @@ __pycache__/
 *.py[cod]
 
 # To hide mongo url
-config.py
+#config.py

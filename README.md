@@ -31,7 +31,7 @@
 1. Install Mecab 
 
     ```
-    $ # Mecab
+    $ # MeCab
     $ brew install mecab mecab-ipadic
     $ # Python binding
     $ wget https://mecab.googlecode.com/files/mecab-python-0.996.tar.gz
@@ -51,10 +51,35 @@
     $ pip install -r requirements.txt
     ```
 
+1. MongoDB settings
+
+    Please rewrite MONGO_URL in settings.py
+    
 1. Run
 
     ```
     $ python run-crawler.py # build a index
     $ python run-webapp.py # access to http://127.0.0.1:5000
     ```
-    
+
+## Project Structure
+
+```
+$ tree .
+.
+├── README.md
+├── config.py
+├── requirements.txt
+├── run-crawler.py
+├── run-webapp.py
+├── search_engine
+│   ├── __init__.py
+│   ├── static
+│   ├── templates
+│   │   └── index.html
+│   └── views.py
+└── web_crawler
+    ├── __init__.py
+    ├── crawler.py
+    └── drop_collection.py
+```
