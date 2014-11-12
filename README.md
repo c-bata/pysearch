@@ -12,7 +12,7 @@
 - データをMongoDBに格納
 - FlaskでWebアプリ作成
 
-詳しくはブログのほうに書きます([Programming Log](http://nwpct1.hatenablog.com/python-search-engine))。
+詳しくはブログのほうに書きます([Programming Log](http://nwpct1.hatenablog.com/entry/python-search-engine))。
 
 ## Requirements
 
