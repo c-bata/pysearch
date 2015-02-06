@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-__author__ = 'masashi'
 
 from web_crawler import collection as col
 import urllib2
@@ -110,9 +109,3 @@ def crawl_web(seed, max_depth):
         if not to_crawl:
             to_crawl, next_depth = next_depth, []
             depth += 1
-
-
-if __name__ == '__main__':
-    #crawl_web('http://docs.sphinx-users.jp/contents.html', 2)
-    import doctest
-    doctest.testmod()
