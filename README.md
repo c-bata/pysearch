@@ -12,13 +12,14 @@
 - データをMongoDBに格納
 - FlaskでWebアプリ作成
 
-詳しくはブログのほうに書きます([Programming Log](http://nwpct1.hatenablog.com/entry/python-search-engine))。
+詳しくはブログのほうに書きます([c-bata web](http://nwpct1.hatenablog.com/entry/python-search-engine))。
 
 ## Requirements
 
 - Python 2.7
 - pip
 - MeCab
+
 
 ## Setup
 
@@ -61,25 +62,3 @@
     $ python run-crawler.py # build a index
     $ python run-webapp.py # access to http://127.0.0.1:5000
     ```
-
-## Project Structure
-
-```
-$ tree .
-.
-├── README.md
-├── config.py
-├── requirements.txt
-├── run-crawler.py
-├── run-webapp.py
-├── search_engine
-│   ├── __init__.py
-│   ├── static
-│   ├── templates
-│   │   └── index.html
-│   └── views.py
-└── web_crawler
-    ├── __init__.py
-    ├── crawler.py
-    └── drop_collection.py
-```
