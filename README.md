@@ -37,7 +37,7 @@ More details are avairable from [My Tech Blog(Japanese)](http://nwpct1.hatenablo
 4. Run
 
     ```
-    $ python run-crawler.py # build a index
-    $ python run-webapp.py # access to http://127.0.0.1:5000
+    $ python manage.py crawler # build a index
+    $ python manage.py web     # access to http://127.0.0.1:5000
     ```
 

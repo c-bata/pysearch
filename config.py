@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__author__ = 'masashi'
+__author__ = 'c-bata'
 
 import os
 
