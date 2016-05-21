@@ -1,0 +1,5 @@
+mongo:
+  image: mongo
+  container_name: pysearch_mongo
+  ports:
+   - "27017:27017"

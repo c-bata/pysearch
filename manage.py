@@ -1,19 +1,17 @@
-# -*- coding: utf-8 -*-
-import sys
+import argparse
 __author__ = 'c-bata'
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print("Invalid arguments.")
-        sys.exit(1)
-    elif sys.argv[1] == 'crawler':
-        from web_crawler import crawl_web
-        crawl_web('http://docs.sphinx-users.jp/contents.html', 2)
-    elif sys.argv[1] == 'web':
-        from search_engine import app
-        app.run(debug=True)
-    else:
-        print('"{}" is unknown option'.format(sys.argv[1]))
-        sys.exit(1)
+    parser = argparse.ArgumentParser("Runner")
+    parser.add_argument('action', type=str, nargs=None, help="Select target 'crawler' or 'webpage'?")
+    args = parser.parse_args()
 
+    if args.action == 'crawler':
+        from web_crawler.crawler import crawl_web
+        crawl_web('http://docs.sphinx-users.jp/contents.html', 2)
+    elif args.action == 'webpage':
+        from search_engine import app
+        app.run(debug=True, port=9000)
+    else:
+        raise ValueError('Please select "crawler" or "webpage".')

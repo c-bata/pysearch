@@ -13,7 +13,6 @@ More details are avairable from [My Tech Blog(Japanese)](http://nwpct1.hatenablo
 ## Requirements
 
 - Python 3.5
-- Janome
 
 ## Setup
 
@@ -27,17 +26,13 @@ More details are avairable from [My Tech Blog(Japanese)](http://nwpct1.hatenablo
 
     ```
     $ cd SearchEngine
-    $ pip install -r requirements.txt
+    $ pip install -r requirements.txt -c constraints.txt
     ```
 
 3. MongoDB settings
-
-    Please rewrite MONGO_URL in settings.py
-
 4. Run
 
     ```
     $ python manage.py crawler # build a index
-    $ python manage.py web     # access to http://127.0.0.1:5000
+    $ python manage.py webpage # access to http://127.0.0.1:5000
     ```
-

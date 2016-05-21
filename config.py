@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-__author__ = 'c-bata'
-
 import os
 
 # application settings

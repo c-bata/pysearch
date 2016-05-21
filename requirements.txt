@@ -1,3 +1,5 @@
-Flask==0.10.1
-mecab-python==0.996
-pymongo==2.7.2
+flask
+janome
+pymongo
+requests
+beautifulsoup4
