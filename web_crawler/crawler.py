@@ -49,7 +49,6 @@ def add_to_index(keyword, url):
 
 def add_page_to_index(url, html):
     body_soup = BeautifulSoup(html, "html.parser").find('body')
-    import pdb; pdb.set_trace()
     for child_tag in body_soup.findChildren():
         if child_tag.name == 'script':
             continue
